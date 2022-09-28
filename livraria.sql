@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Set-2022 às 03:28
+-- Tempo de geração: 28-Set-2022 às 03:21
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 8.0.7
 
@@ -42,6 +42,17 @@ CREATE TABLE `generos` (
   `cod_generos` int(11) NOT NULL,
   `nome_genero` varchar(120) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `generos`
+--
+
+INSERT INTO `generos` (`cod_generos`, `nome_genero`) VALUES
+(1, 'Biografia'),
+(2, 'Literatura'),
+(3, 'Autoajuda'),
+(4, 'Didaticos'),
+(5, 'Quadrinhos');
 
 -- --------------------------------------------------------
 
@@ -96,3 +107,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
