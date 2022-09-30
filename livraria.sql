@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Set-2022 às 03:21
+-- Tempo de geração: 01-Out-2022 às 01:46
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 8.0.7
 
@@ -32,6 +32,15 @@ CREATE TABLE `editoras` (
   `nome_editora` varchar(120) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `editoras`
+--
+
+INSERT INTO `editoras` (`cod_editoras`, `nome_editora`) VALUES
+(1, 'Viena'),
+(2, 'livros Bom'),
+(3, 'Leia Bem');
+
 -- --------------------------------------------------------
 
 --
@@ -57,10 +66,10 @@ INSERT INTO `generos` (`cod_generos`, `nome_genero`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `liros`
+-- Estrutura da tabela `livros`
 --
 
-CREATE TABLE `liros` (
+CREATE TABLE `livros` (
   `codigo_livro` int(11) NOT NULL,
   `titulo_livro` varchar(120) DEFAULT NULL,
   `autor_livro` varchar(120) DEFAULT NULL,
@@ -84,24 +93,19 @@ CREATE TABLE `subgeneros` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Índices para tabelas despejadas
+-- Extraindo dados da tabela `subgeneros`
 --
 
---
--- Índices para tabela `liros`
---
-ALTER TABLE `liros`
-  ADD PRIMARY KEY (`codigo_livro`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `liros`
---
-ALTER TABLE `liros`
-  MODIFY `codigo_livro` int(11) NOT NULL AUTO_INCREMENT;
+INSERT INTO `subgeneros` (`codigo_subgenero`, `nome_subgenero`, `cod_genero_pertencente`) VALUES
+(1, 'Historiaa', 4),
+(2, 'Matematica', 4),
+(3, 'Literatura Infantojuvenil', 2),
+(4, 'Literatura Brasileira', 2),
+(5, 'Literatura Estrangeira', 2),
+(6, 'Manga', 5),
+(7, 'Gibi', 5),
+(8, 'Autobiografia', 1),
+(9, 'Combater Ansiedade', 3);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
