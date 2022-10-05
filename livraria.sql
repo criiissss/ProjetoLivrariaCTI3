@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Out-2022 às 01:46
+-- Tempo de geração: 05-Out-2022 às 03:24
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 8.0.7
 
@@ -29,17 +29,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `editoras` (
   `cod_editoras` int(11) NOT NULL,
-  `nome_editora` varchar(120) DEFAULT NULL
+  `nome_editora` varchar(120) DEFAULT NULL,
+  `cidade_editora` varchar(120) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `editoras`
 --
 
-INSERT INTO `editoras` (`cod_editoras`, `nome_editora`) VALUES
-(1, 'Viena'),
-(2, 'livros Bom'),
-(3, 'Leia Bem');
+INSERT INTO `editoras` (`cod_editoras`, `nome_editora`, `cidade_editora`) VALUES
+(1, 'Viena', NULL),
+(2, 'livros Bom', NULL),
+(3, 'Leia Bem', NULL);
 
 -- --------------------------------------------------------
 
